@@ -8,3 +8,10 @@ CronJob.schedule('* * * * * *', () => {
 		}
 	}
 );
+
+CronJob.schedule('* * * * * *', () => {
+	if (shell.exec('node sayHello.js').code !== 0) {
+			console.log('execution of sayHello');
+		}
+	}
+);
